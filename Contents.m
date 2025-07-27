@@ -1,12 +1,24 @@
-% Contents.m for xIMU3 Dashboard Toolbox
-% Version 1.0.0
+% xIMU3Mod Toolbox for MATLAB
+% Version 1.1 (2025-07-25)
 %
-% xIMU3Dashboard
-%   xIMU3Dashboard - Launch the real‑time x‑IMU3 visualization dashboard.
+% Minimal MATLAB interface for the x-IMU3 sensor via Serial or TCP.
 %
-% imuStreamingApp.xIMU3
-%   xIMU3      - Class for serial SLIP‑I/O and parsing of all x‑IMU3 streams.
+% Files:
+%   xIMU3Mod.m    - Single class to connect, configure, and stream IMU data
 %
-% initIMU
-%   initIMU    - (Optional) Example script to instantiate and configure x‑IMU3.
-%%%
+% Quick Start:
+%   imu = xIMU3Mod('tcp', '192.168.1.1',7000);
+%   angles = imu.readEuler();
+%
+% Features:
+%   - Supports TCP and Serial
+%   - Reads Euler angles, Quaternion, Gyro & Accel
+%   - Handles SLIP decoding & angle unwrapping
+%
+% Author:
+%   Vivek Raj (RISE LAB, IIT Delhi, 2025)
+%
+% License:
+%   MIT
+%
+% See also serialport, tcpclient
