@@ -20,5 +20,3 @@
 %
 % License:
 %   MIT
-%
-% See also serialport, tcpclient
